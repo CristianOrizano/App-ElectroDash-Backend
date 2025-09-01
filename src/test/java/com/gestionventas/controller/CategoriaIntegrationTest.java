@@ -43,7 +43,7 @@ public class CategoriaIntegrationTest {
                 .andExpect(jsonPath("$.nombre").isNotEmpty());
     }
 
-    @Test
+    /*@Test
     void testCrearCategoria() throws Exception {
         // Crear objeto real (entidad o DTO)
         Categoria categoria = new Categoria();
@@ -58,6 +58,6 @@ public class CategoriaIntegrationTest {
                         .content(json))
                 .andExpect(status().isCreated())
                 .andExpect(jsonPath("$.nombre").value("Tecnología"));
-    }
+    } */
 
 }

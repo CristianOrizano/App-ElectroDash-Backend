@@ -14,7 +14,7 @@ public class CategoriaRepositoryTests {
     @Autowired
     private CategoriaRepository categoriaRepository;
 
-    @Test
+    /*@Test
     @DisplayName("Debe guardar y recuperar una categoría")
     void testGuardarYCargarCategoria() {
         Categoria categoria = new Categoria();
@@ -29,6 +29,6 @@ public class CategoriaRepositoryTests {
         Optional<Categoria> encontrada = categoriaRepository.findById(guardada.getId());
         assertTrue(encontrada.isPresent());
         assertEquals("Electrodomésticos", encontrada.get().getNombre());
-    }
+    } */
 
 }

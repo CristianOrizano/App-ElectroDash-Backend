@@ -6,7 +6,7 @@ services:
     restart: always
     environment:
       MYSQL_ROOT_PASSWORD: mysql
-      MYSQL_DATABASE: gestionventas
+      MYSQL_DATABASE: electrodash
     volumes:
       - mysql_data:/var/lib/mysql
     ports:
@@ -16,14 +16,14 @@ services:
 
   app:
     build: .
-    image: cristianorizano10/backend-gestionventas:latest
+    image: cristianorizano10/backend-electrodash:latest
     restart: always
     ports:
       - "8091:8091"
     environment:
-      DB_URL: jdbc:mysql://db:3306/gestionventas?serverTimezone=America/Lima
-      DB_USER_NAME: root
-      DB_PASSWORD: mysql
+      SPRING_DATASOURCE_URL: jdbc:mysql://db:3306/electrodash?serverTimezone=America/Lima
+      SPRING_DATASOURCE_USERNAME: root
+      SPRING_DATASOURCE_PASSWORD: mysql
     depends_on:
       - db
     networks:
